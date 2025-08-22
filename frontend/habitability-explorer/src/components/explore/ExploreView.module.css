@@ -1,0 +1,97 @@
+.exploreView {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: white;
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  margin-bottom: var(--spacing-lg);
+  animation-delay: 0.2s;
+}
+
+.subtitle {
+  font-size: clamp(1.125rem, 4vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+  animation-delay: 0.4s;
+}
+
+.cta {
+  background: var(--color-accent);
+  color: white;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  transition: transform var(--transition-speed) var(--transition-ease);
+  animation-delay: 0.6s;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+}
+
+.waveContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  opacity: 0.6;
+}
+
+.wave {
+  animation: wave 3s ease-in-out infinite;
+}
+
+.planetsSection {
+  padding: var(--spacing-xl) 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.planetGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}

@@ -1,0 +1,87 @@
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform var(--transition-speed) var(--transition-ease);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.imageContainer {
+  position: relative;
+  padding-top: 75%;
+  background: #000;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.habitabilityIndicator {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.score {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all var(--transition-speed) var(--transition-ease);
+}
+
+.habitabilityIndicator:hover .score {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.content {
+  padding: var(--spacing-md);
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-size: 0.875rem;
+  font-weight: 500;
+}

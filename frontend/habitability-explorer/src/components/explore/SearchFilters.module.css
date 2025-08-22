@@ -1,0 +1,125 @@
+.filters {
+  background: white;
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.searchBar {
+  margin-bottom: var(--spacing-lg);
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.filterGrid {
+  display: grid;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.label {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.rangeInputs {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.numberInput {
+  width: 80px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.rangeSlider {
+  position: relative;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+.rangeInput {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+}
+
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+}
+
+.filterActions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+}
+
+.resetButton,
+.applyButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-speed) var(--transition-ease);
+}
+
+.resetButton {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.resetButton:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.applyButton {
+  background: var(--color-accent);
+  border: none;
+  color: white;
+}
+
+.applyButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .filterGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
